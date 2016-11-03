@@ -1,0 +1,25 @@
+#!/bin/bash   
+
+cat kroonika_2003.t3 
+ 
+sed 's/.*\/\/    .*/ /g' \
+| sed 's/.*    //' \
+| grep -1 '_D_' \
+| grep -v '_[SZPKNCHAJG]_' \
+| sed 's/+0//' | tr -d '_\=/,' | grep -v '^$' \
+| sed 's/+.* /ma£#/' \
+| grep -v '<s>' \
+| sed 's/ D/£/' \
+| grep -v 'V' \
+| tr -d '\012' | tr '-' '\012' \
+| egrep '#' \
+| tr -s ' ' \
+| tr '#' '\012' \
+| sed 's/^ //' \
+| sed 's/\([^ ]*.*£\) \(.*ma£$\)/#\1\2#/g' \
+| sed 's/.* //' \
+| sed 's/£#$//' | tr -d '#' \
+| tr '£' ' ' \
+| sed 's/\(^.*\) \(.*$\)/\2 \1/g' \
+| grep -v 'USA' | grep -v '80' \
+| sort | uniq -c | sort -nr | less
