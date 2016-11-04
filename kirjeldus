@@ -1,0 +1,22 @@
+#9 Et tuvastada iga sõna sõnaliik, jätan alles sõna esimese morfoloogilise analüüsi märgendite "//" vahel, millele järgneb neli tühikut
+#10 Kustutan ka tekstis esineva sõna, et alles jääks vaid lemma ja "+", et hiljem verbidele lisada ma-infinitiiv
+#11 Otsin välja kõik adverbid ja sellele eelnevad ja järgnevad sõnad
+#12 Kustutan kõik read, kus pole verbe ega adverbe
+#13 Kustutan adverbi lõpust märgendi "+0", märgendid "_=/," ja tühjad read
+#14 Asendan verbide lõpud ma-infinitiiviga ja lisan sinna lõppu märgendid "£#", et hiljem neid selle järgi sõnu grupeerida
+#15 Kustutan lausete alguse märgendid 
+#16 Asendan adverbi märgendi "D" märgendiga "£", et selle järgi hiljem grupeerida
+#17 Kustutan verbi märgendi "V"
+#18 Kustutan reavahetused ning asendan märgendi "-" reavahetusega, mis eraldas ennist tehtud adverbiotsingut käsuga grep -1
+#19 Võtan välja read, kus esineb verb, mis on märgendatud "#"
+#20 Kustutan üleliigsed tühikud
+#21 Muudan verbi lõppu märkivad "#" reavahetuseks
+#22 Kustutan ridade alguses olevad tühikud
+#23 Lisan verbi lõppu ja sellele eelneva adverbi ette "#", et nende abil hiljem kustutada üleliigsed adverbid
+#24 Võtan välja read, kus rea lõpus on verb ja sellele eelneb üks adverb 
+#25 Kustutan üleliigsed adverbid rea algusest
+#26 Kustutan verbi lõpust märgendid "£" ja "#" ja adverbi algusest märgendi "#"
+#27 Asendan sõnaühendi vahel oleva "£" tühikuga
+#28 Vahetan sõnade järjekorra nii, et verb oleks adverbi ees
+#29 Puhastan tulemuse prahist, kustutades väljundisse sattunud "USA" ja "80"
+#30 Sorteerin tulemused esinemise sageduse järgi
